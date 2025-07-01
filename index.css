@@ -1,0 +1,39 @@
+/* Center the flag on screen */
+body {
+  margin: 0;
+  height: 100vh;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Square flag container with red background */
+.swiss-flag {
+  position: relative;
+  width: 320px;
+  height: 320px; /* 1:1 aspect ratio */
+  background-color: #d52b1e;
+}
+
+/* Horizontal white bar (3/16 height, 5/8 width) */
+.horizontal-bar {
+  position: absolute;
+  background-color: white;
+  width: 62.5%;   /* 5/8 = 62.5% of flag width */
+  height: 18.75%; /* 3/16 = 18.75% of flag height */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Vertical white bar (same thickness and length as horizontal but rotated) */
+.vertical-bar {
+  position: absolute;
+  background-color: white;
+  width: 18.75%;  /* Thickness same as horizontal's height */
+  height: 62.5%;  /* Same as horizontal's width */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
